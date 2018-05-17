@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52C1F70B209EED3A00FD45DA /* UIButton_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C1F70A209EED3A00FD45DA /* UIButton_Extension.swift */; };
+		52C1F70D209EF24F00FD45DA /* FinishGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C1F70C209EF24F00FD45DA /* FinishGoalVC.swift */; };
 		52CE2E3C209DDF57003A58E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE2E3B209DDF57003A58E9 /* AppDelegate.swift */; };
-		52CE2E3E209DDF57003A58E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE2E3D209DDF57003A58E9 /* ViewController.swift */; };
+		52CE2E3E209DDF57003A58E9 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE2E3D209DDF57003A58E9 /* GoalsVC.swift */; };
 		52CE2E41209DDF57003A58E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CE2E3F209DDF57003A58E9 /* Main.storyboard */; };
 		52CE2E44209DDF57003A58E9 /* GoalPost.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52CE2E42209DDF57003A58E9 /* GoalPost.xcdatamodeld */; };
 		52CE2E46209DDF58003A58E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CE2E45209DDF58003A58E9 /* Assets.xcassets */; };
 		52CE2E49209DDF58003A58E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CE2E47209DDF58003A58E9 /* LaunchScreen.storyboard */; };
+		52CE2E56209DE252003A58E9 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE2E55209DE252003A58E9 /* GoalCell.swift */; };
+		52CE2E58209DECEC003A58E9 /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE2E57209DECEC003A58E9 /* CreateGoalVC.swift */; };
+		52CE2E5A209DEE2D003A58E9 /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE2E59209DEE2D003A58E9 /* GoalType.swift */; };
+		52CE2E5C209DF2A0003A58E9 /* UIViewController_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE2E5B209DF2A0003A58E9 /* UIViewController_Extension.swift */; };
+		52CE2E5E209DF550003A58E9 /* UIView_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE2E5D209DF550003A58E9 /* UIView_Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52C1F70A209EED3A00FD45DA /* UIButton_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton_Extension.swift; sourceTree = "<group>"; };
+		52C1F70C209EF24F00FD45DA /* FinishGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGoalVC.swift; sourceTree = "<group>"; };
 		52CE2E38209DDF57003A58E9 /* GoalPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CE2E3B209DDF57003A58E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52CE2E3D209DDF57003A58E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52CE2E3D209DDF57003A58E9 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		52CE2E40209DDF57003A58E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52CE2E43209DDF57003A58E9 /* GoalPost.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoalPost.xcdatamodel; sourceTree = "<group>"; };
 		52CE2E45209DDF58003A58E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52CE2E48209DDF58003A58E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52CE2E4A209DDF58003A58E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CE2E55209DE252003A58E9 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		52CE2E57209DECEC003A58E9 /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
+		52CE2E59209DEE2D003A58E9 /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
+		52CE2E5B209DF2A0003A58E9 /* UIViewController_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Extension.swift; sourceTree = "<group>"; };
+		52CE2E5D209DF550003A58E9 /* UIView_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,62 @@
 		52CE2E3A209DDF57003A58E9 /* GoalPost */ = {
 			isa = PBXGroup;
 			children = (
-				52CE2E3B209DDF57003A58E9 /* AppDelegate.swift */,
-				52CE2E3D209DDF57003A58E9 /* ViewController.swift */,
+				52CE2E54209DDFA6003A58E9 /* Extensions */,
+				52CE2E53209DDFA2003A58E9 /* Enums */,
+				52CE2E52209DDF7E003A58E9 /* Model */,
+				52CE2E51209DDF7A003A58E9 /* View */,
+				52CE2E50209DDF73003A58E9 /* Controller */,
 				52CE2E3F209DDF57003A58E9 /* Main.storyboard */,
-				52CE2E45209DDF58003A58E9 /* Assets.xcassets */,
 				52CE2E47209DDF58003A58E9 /* LaunchScreen.storyboard */,
+				52CE2E45209DDF58003A58E9 /* Assets.xcassets */,
+				52CE2E3B209DDF57003A58E9 /* AppDelegate.swift */,
 				52CE2E4A209DDF58003A58E9 /* Info.plist */,
-				52CE2E42209DDF57003A58E9 /* GoalPost.xcdatamodeld */,
 			);
 			path = GoalPost;
+			sourceTree = "<group>";
+		};
+		52CE2E50209DDF73003A58E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52CE2E3D209DDF57003A58E9 /* GoalsVC.swift */,
+				52CE2E57209DECEC003A58E9 /* CreateGoalVC.swift */,
+				52C1F70C209EF24F00FD45DA /* FinishGoalVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52CE2E51209DDF7A003A58E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52CE2E55209DE252003A58E9 /* GoalCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52CE2E52209DDF7E003A58E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52CE2E42209DDF57003A58E9 /* GoalPost.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52CE2E53209DDFA2003A58E9 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				52CE2E59209DEE2D003A58E9 /* GoalType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		52CE2E54209DDFA6003A58E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52CE2E5B209DF2A0003A58E9 /* UIViewController_Extension.swift */,
+				52CE2E5D209DF550003A58E9 /* UIView_Extension.swift */,
+				52C1F70A209EED3A00FD45DA /* UIButton_Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +199,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52CE2E3E209DDF57003A58E9 /* ViewController.swift in Sources */,
+				52CE2E56209DE252003A58E9 /* GoalCell.swift in Sources */,
+				52C1F70B209EED3A00FD45DA /* UIButton_Extension.swift in Sources */,
+				52CE2E3E209DDF57003A58E9 /* GoalsVC.swift in Sources */,
+				52CE2E5A209DEE2D003A58E9 /* GoalType.swift in Sources */,
+				52CE2E58209DECEC003A58E9 /* CreateGoalVC.swift in Sources */,
+				52CE2E5C209DF2A0003A58E9 /* UIViewController_Extension.swift in Sources */,
 				52CE2E3C209DDF57003A58E9 /* AppDelegate.swift in Sources */,
+				52CE2E5E209DF550003A58E9 /* UIView_Extension.swift in Sources */,
+				52C1F70D209EF24F00FD45DA /* FinishGoalVC.swift in Sources */,
 				52CE2E44209DDF57003A58E9 /* GoalPost.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

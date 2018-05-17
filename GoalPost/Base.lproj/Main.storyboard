@@ -1,24 +1,475 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--GoalsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoalsVC" id="BYZ-38-t0r" customClass="GoalsVC" customModule="GoalPost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLG-OT-z1b">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ODT-Ir-gEB">
+                                        <rect key="frame" x="127.5" y="36" width="120" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="GOAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpC-C6-9ft">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="24"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="19"/>
+                                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUR-bs-5oj">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="24"/>
+                                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="19"/>
+                                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="p2h-ka-YZT"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MO-x9-h40">
+                                        <rect key="frame" x="332" y="32" width="35" height="32"/>
+                                        <state key="normal" image="addGoal"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jcS-vI-qf4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21223958330000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8MO-x9-h40" secondAttribute="trailing" constant="8" id="AsM-dD-J9u"/>
+                                    <constraint firstItem="ODT-Ir-gEB" firstAttribute="centerX" secondItem="OLG-OT-z1b" secondAttribute="centerX" id="THQ-QS-RhF"/>
+                                    <constraint firstAttribute="height" constant="70" id="e4e-Kc-CcW"/>
+                                    <constraint firstAttribute="bottom" secondItem="ODT-Ir-gEB" secondAttribute="bottom" constant="10" id="gCN-kO-dz1"/>
+                                    <constraint firstItem="8MO-x9-h40" firstAttribute="centerY" secondItem="ODT-Ir-gEB" secondAttribute="centerY" id="sEa-8e-71a"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r7h-go-l7B">
+                                <rect key="frame" x="44.5" y="312" width="286.5" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the GOALPOST!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eca-iC-vrZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="286.5" height="27"/>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To begin, create a goal!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvB-PE-4Uf">
+                                        <rect key="frame" x="74.5" y="27" width="138" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LKm-hD-aJN">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="goalCell" rowHeight="70" id="beH-Ln-bE6" customClass="GoalCell" customModule="GoalPost" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beH-Ln-bE6" id="dC2-1F-0Db">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdU-FB-DWL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha2-qY-S9H">
+                                                            <rect key="frame" x="20" y="5" width="335" height="60"/>
+                                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="32"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="ha2-qY-S9H" secondAttribute="trailing" constant="20" id="3b3-d1-YWA"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ha2-qY-S9H" secondAttribute="bottom" constant="5" id="J7K-Zi-TOS"/>
+                                                        <constraint firstItem="ha2-qY-S9H" firstAttribute="leading" secondItem="MdU-FB-DWL" secondAttribute="leading" constant="20" id="lPA-8W-MKI"/>
+                                                        <constraint firstItem="ha2-qY-S9H" firstAttribute="top" secondItem="MdU-FB-DWL" secondAttribute="top" constant="5" id="nB3-PA-ZYa"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EqN-xN-T4f">
+                                                    <rect key="frame" x="19" y="13.5" width="298" height="44"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xpa-c0-g2o">
+                                                            <rect key="frame" x="0.0" y="0.0" width="298" height="21.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbo-Ev-eKa">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="21.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="hza-BD-oSW"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat more carrots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQ4-lA-eq0">
+                                                                    <rect key="frame" x="65" y="0.0" width="233" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="32V-iz-uUF">
+                                                            <rect key="frame" x="0.0" y="26.5" width="298" height="17.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4Q-27-ldF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="17.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="ybo-Yl-96r"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="14"/>
+                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short term" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grr-wo-61M">
+                                                                    <rect key="frame" x="65" y="0.0" width="233" height="17.5"/>
+                                                                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="14"/>
+                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e0-ay-PWx">
+                                                    <rect key="frame" x="327" y="8" width="40" height="53.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="bmR-vK-ULu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="32"/>
+                                                    <color key="textColor" red="0.21223958330000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MdU-FB-DWL" firstAttribute="leading" secondItem="dC2-1F-0Db" secondAttribute="leading" id="1V4-Za-8T0"/>
+                                                <constraint firstItem="EqN-xN-T4f" firstAttribute="leading" secondItem="dC2-1F-0Db" secondAttribute="leadingMargin" constant="4" id="9yH-TL-0iv"/>
+                                                <constraint firstAttribute="bottom" secondItem="8e0-ay-PWx" secondAttribute="bottom" constant="8" id="BLW-ku-Y34"/>
+                                                <constraint firstItem="8e0-ay-PWx" firstAttribute="top" secondItem="dC2-1F-0Db" secondAttribute="top" constant="8" id="KlR-I6-0kV"/>
+                                                <constraint firstItem="8e0-ay-PWx" firstAttribute="leading" secondItem="EqN-xN-T4f" secondAttribute="trailing" constant="10" id="N4x-Oa-rgK"/>
+                                                <constraint firstAttribute="trailing" secondItem="8e0-ay-PWx" secondAttribute="trailing" constant="8" id="UiS-Mt-zWG"/>
+                                                <constraint firstItem="MdU-FB-DWL" firstAttribute="top" secondItem="dC2-1F-0Db" secondAttribute="top" id="hvK-Mp-95w"/>
+                                                <constraint firstAttribute="bottom" secondItem="MdU-FB-DWL" secondAttribute="bottom" id="iSK-Fn-xvx"/>
+                                                <constraint firstAttribute="trailing" secondItem="MdU-FB-DWL" secondAttribute="trailing" id="nAx-VJ-tDD"/>
+                                                <constraint firstItem="EqN-xN-T4f" firstAttribute="centerY" secondItem="8e0-ay-PWx" secondAttribute="centerY" id="qld-WU-dvS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="completedView" destination="MdU-FB-DWL" id="o98-bZ-uj7"/>
+                                            <outlet property="goalDescriptionLabel" destination="PQ4-lA-eq0" id="hFY-D9-8Ft"/>
+                                            <outlet property="goalProgressLabel" destination="8e0-ay-PWx" id="a4s-Gi-fdz"/>
+                                            <outlet property="goalTypeLabel" destination="grr-wo-61M" id="isN-N9-QcY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OLG-OT-z1b" secondAttribute="trailing" id="6CS-lS-hAM"/>
+                            <constraint firstItem="LKm-hD-aJN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CZ6-uI-xX1"/>
+                            <constraint firstItem="OLG-OT-z1b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NUU-2d-eM9"/>
+                            <constraint firstItem="LKm-hD-aJN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dM1-b9-d7s"/>
+                            <constraint firstItem="OLG-OT-z1b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dgx-ie-5VG"/>
+                            <constraint firstItem="LKm-hD-aJN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e9h-5L-dWN"/>
+                            <constraint firstItem="r7h-go-l7B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iKI-vk-o6k"/>
+                            <constraint firstItem="r7h-go-l7B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mrm-mY-tcw"/>
+                            <constraint firstItem="LKm-hD-aJN" firstAttribute="top" secondItem="OLG-OT-z1b" secondAttribute="bottom" id="zzL-gn-xK1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="LKm-hD-aJN" id="QO1-fw-Gro"/>
+                        <outlet property="welcomeTextStack" destination="r7h-go-l7B" id="UXr-Bb-HzO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Create GoalVC-->
+        <scene sceneID="arw-yt-cBa">
+            <objects>
+                <viewController storyboardIdentifier="CreateGoalVC" id="Yyg-Ej-tfy" customClass="CreateGoalVC" customModule="GoalPost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="asA-Op-BKu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pav-qn-cxe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rd2-Yx-v8T">
+                                        <rect key="frame" x="127.5" y="36" width="120" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="GOAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iu1-R8-8bz">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="24"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="19"/>
+                                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMK-v9-VSf">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="24"/>
+                                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="19"/>
+                                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="OgI-gU-rK3"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcR-V2-09d">
+                                        <rect key="frame" x="8" y="35.5" width="14" height="25"/>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="Yyg-Ej-tfy" eventType="touchUpInside" id="fsP-7y-OqE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21223958330000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="FWD-Db-i69"/>
+                                    <constraint firstItem="Rd2-Yx-v8T" firstAttribute="centerX" secondItem="pav-qn-cxe" secondAttribute="centerX" id="PbV-Nd-mv6"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rd2-Yx-v8T" secondAttribute="bottom" constant="10" id="jjR-Cf-WYC"/>
+                                    <constraint firstItem="VcR-V2-09d" firstAttribute="leading" secondItem="pav-qn-cxe" secondAttribute="leading" constant="8" id="xLT-oo-Rx0"/>
+                                    <constraint firstItem="VcR-V2-09d" firstAttribute="centerY" secondItem="Rd2-Yx-v8T" secondAttribute="centerY" id="ys8-xD-ffP"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What is your goal?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gfO-ym-yGP">
+                                <rect key="frame" x="16" y="78" width="343" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="aZ8-Ug-Mxa"/>
+                                </constraints>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose one:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBt-XT-sbl">
+                                <rect key="frame" x="30" y="236" width="329" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="ZfC-WN-ND7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="14"/>
+                                <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8qF-sW-h9V">
+                                <rect key="frame" x="30" y="262" width="315" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3l-y7-GmN">
+                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="40"/>
+                                        <color key="backgroundColor" red="0.21223958330000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
+                                        <state key="normal" title="SHORT TERM">
+                                            <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shortTermButtonPressed:" destination="Yyg-Ej-tfy" eventType="touchUpInside" id="zuR-ky-0re"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcg-e7-gba">
+                                        <rect key="frame" x="167.5" y="0.0" width="147.5" height="40"/>
+                                        <color key="backgroundColor" red="0.69803921568627447" green="0.8666666666666667" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
+                                        <state key="normal" title="LONG TERM">
+                                            <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="longTermButtonPressed:" destination="Yyg-Ej-tfy" eventType="touchUpInside" id="cCo-eb-ULq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MCw-FB-N9L"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7n-i2-evI">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YjC-cq-7TE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="Yyg-Ej-tfy" eventType="touchUpInside" id="cDf-2R-h5P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pav-qn-cxe" firstAttribute="top" secondItem="asA-Op-BKu" secondAttribute="top" id="3VH-oi-auJ"/>
+                            <constraint firstItem="IVO-qs-w7q" firstAttribute="trailing" secondItem="8qF-sW-h9V" secondAttribute="trailing" constant="30" id="4HP-Ml-cw0"/>
+                            <constraint firstItem="r7n-i2-evI" firstAttribute="bottom" secondItem="IVO-qs-w7q" secondAttribute="bottom" id="CI8-J1-BbJ"/>
+                            <constraint firstItem="pav-qn-cxe" firstAttribute="leading" secondItem="IVO-qs-w7q" secondAttribute="leading" id="I0P-eO-hlC"/>
+                            <constraint firstItem="IVO-qs-w7q" firstAttribute="trailing" secondItem="HBt-XT-sbl" secondAttribute="trailing" constant="16" id="Mdd-SU-ix3"/>
+                            <constraint firstItem="IVO-qs-w7q" firstAttribute="trailing" secondItem="r7n-i2-evI" secondAttribute="trailing" id="Olf-Qg-gfO"/>
+                            <constraint firstItem="gfO-ym-yGP" firstAttribute="top" secondItem="pav-qn-cxe" secondAttribute="bottom" constant="8" id="Rv1-Ll-H3B"/>
+                            <constraint firstItem="HBt-XT-sbl" firstAttribute="top" secondItem="gfO-ym-yGP" secondAttribute="bottom" constant="8" id="bFT-9Y-ECD"/>
+                            <constraint firstItem="r7n-i2-evI" firstAttribute="leading" secondItem="IVO-qs-w7q" secondAttribute="leading" id="c9D-fK-JY4"/>
+                            <constraint firstItem="IVO-qs-w7q" firstAttribute="trailing" secondItem="gfO-ym-yGP" secondAttribute="trailing" constant="16" id="kpm-SZ-XpS"/>
+                            <constraint firstItem="HBt-XT-sbl" firstAttribute="leading" secondItem="IVO-qs-w7q" secondAttribute="leading" constant="30" id="ltt-75-WQd"/>
+                            <constraint firstItem="pav-qn-cxe" firstAttribute="trailing" secondItem="IVO-qs-w7q" secondAttribute="trailing" id="mdg-Ud-ral"/>
+                            <constraint firstItem="gfO-ym-yGP" firstAttribute="leading" secondItem="IVO-qs-w7q" secondAttribute="leading" constant="16" id="pjC-sI-CCb"/>
+                            <constraint firstItem="8qF-sW-h9V" firstAttribute="top" secondItem="HBt-XT-sbl" secondAttribute="bottom" constant="8" id="w2s-TK-YCW"/>
+                            <constraint firstItem="8qF-sW-h9V" firstAttribute="leading" secondItem="IVO-qs-w7q" secondAttribute="leading" constant="30" id="y14-Rp-brD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IVO-qs-w7q"/>
+                    </view>
+                    <connections>
+                        <outlet property="goalDescriptionTextView" destination="gfO-ym-yGP" id="3rP-FA-y63"/>
+                        <outlet property="longTermButton" destination="dcg-e7-gba" id="ZFR-Pv-wHw"/>
+                        <outlet property="nextButton" destination="r7n-i2-evI" id="hFU-sd-eci"/>
+                        <outlet property="shortTermButton" destination="z3l-y7-GmN" id="fnZ-RA-dF5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3y6-r3-hTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786" y="134"/>
+        </scene>
+        <!--Finish GoalVC-->
+        <scene sceneID="xIv-tX-u6O">
+            <objects>
+                <viewController storyboardIdentifier="FinishGoalVC" id="bh4-nk-aWA" customClass="FinishGoalVC" customModule="GoalPost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VjF-nS-csQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9K-Oa-xK4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VQZ-n1-bJk">
+                                        <rect key="frame" x="127.5" y="36" width="120" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="GOAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xm6-Jg-JEL">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="24"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="19"/>
+                                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D51-Oz-tb2">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="24"/>
+                                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="19"/>
+                                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="smc-1s-SOK"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwK-xz-5bx">
+                                        <rect key="frame" x="8" y="35.5" width="14" height="25"/>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="bh4-nk-aWA" eventType="touchUpInside" id="skR-Ve-Tkq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21223958330000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="CwK-xz-5bx" firstAttribute="centerY" secondItem="VQZ-n1-bJk" secondAttribute="centerY" id="ROT-2V-RZO"/>
+                                    <constraint firstAttribute="height" constant="70" id="Uke-l6-gCc"/>
+                                    <constraint firstItem="CwK-xz-5bx" firstAttribute="leading" secondItem="y9K-Oa-xK4" secondAttribute="leading" constant="8" id="fCe-LI-Qgs"/>
+                                    <constraint firstAttribute="bottom" secondItem="VQZ-n1-bJk" secondAttribute="bottom" constant="10" id="nnd-B1-1h9"/>
+                                    <constraint firstItem="VQZ-n1-bJk" firstAttribute="centerX" secondItem="y9K-Oa-xK4" secondAttribute="centerX" id="sj6-Ia-qbu"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AOv-6r-gEm">
+                                <rect key="frame" x="20" y="90" width="335" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many points till complete?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="typ-m1-1gj">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6JR-VF-VS4">
+                                        <rect key="frame" x="0.0" y="22.5" width="335" height="97.5"/>
+                                        <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="48"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="F9R-7L-UcS"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJ8-sR-0GD">
+                                <rect key="frame" x="0.0" y="218" width="375" height="449"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irQ-O2-8So">
+                                        <rect key="frame" x="0.0" y="409" width="375" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="bes-SB-1sp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
+                                        <state key="normal" title="CREATE GOAL">
+                                            <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createGoalButtonPressed:" destination="bh4-nk-aWA" eventType="touchUpInside" id="txd-Sg-VHJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="irQ-O2-8So" secondAttribute="bottom" id="2UF-2a-4Wv"/>
+                                    <constraint firstItem="irQ-O2-8So" firstAttribute="leading" secondItem="tJ8-sR-0GD" secondAttribute="leading" id="Fbh-km-X8M"/>
+                                    <constraint firstAttribute="trailing" secondItem="irQ-O2-8So" secondAttribute="trailing" id="g1L-B1-JrV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WSd-76-Uje" firstAttribute="trailing" secondItem="AOv-6r-gEm" secondAttribute="trailing" constant="20" id="44K-QX-WpZ"/>
+                            <constraint firstItem="y9K-Oa-xK4" firstAttribute="top" secondItem="VjF-nS-csQ" secondAttribute="top" id="4MA-Mw-XD6"/>
+                            <constraint firstItem="tJ8-sR-0GD" firstAttribute="bottom" secondItem="WSd-76-Uje" secondAttribute="bottom" id="Jrs-UV-a4V"/>
+                            <constraint firstItem="AOv-6r-gEm" firstAttribute="leading" secondItem="WSd-76-Uje" secondAttribute="leading" constant="20" id="OxB-r0-imP"/>
+                            <constraint firstItem="tJ8-sR-0GD" firstAttribute="trailing" secondItem="WSd-76-Uje" secondAttribute="trailing" id="QCJ-yP-9cX"/>
+                            <constraint firstItem="y9K-Oa-xK4" firstAttribute="leading" secondItem="WSd-76-Uje" secondAttribute="leading" id="Qq7-Ou-C7Z"/>
+                            <constraint firstItem="tJ8-sR-0GD" firstAttribute="leading" secondItem="WSd-76-Uje" secondAttribute="leading" id="taR-hl-YG1"/>
+                            <constraint firstItem="tJ8-sR-0GD" firstAttribute="top" secondItem="AOv-6r-gEm" secondAttribute="bottom" constant="8" id="xVz-0b-to4"/>
+                            <constraint firstItem="y9K-Oa-xK4" firstAttribute="trailing" secondItem="WSd-76-Uje" secondAttribute="trailing" id="xaT-rV-vJa"/>
+                            <constraint firstItem="AOv-6r-gEm" firstAttribute="top" secondItem="y9K-Oa-xK4" secondAttribute="bottom" constant="20" id="yId-Tt-80u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WSd-76-Uje"/>
+                    </view>
+                    <connections>
+                        <outlet property="createGoalButton" destination="irQ-O2-8So" id="HlO-cf-HV0"/>
+                        <outlet property="pointsTextField" destination="6JR-VF-VS4" id="mfO-Kd-xNg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rar-oI-NKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1431" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addGoal" width="35" height="32"/>
+        <image name="back" width="14" height="25"/>
+    </resources>
 </document>
